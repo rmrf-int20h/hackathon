@@ -7,7 +7,7 @@ RUN pip install gunicorn django psycopg2-binary
 
 COPY . /opt/services/djangoapp/src
 
-# expose the port 8000
-EXPOSE 8000
+# expose the port 5000
+EXPOSE 5000
 
-CMD ["gunicorn", "--chdir", "hackapp", "--bind", ":8000", "hackapp.wsgi:application"]
+CMD ["gunicorn", "--chdir", "hackapp", "--bind", ":5000", "hackapp.wsgi:application"]

@@ -20,8 +20,7 @@ services:
       - 8000:80
     volumes:
       - ./config/nginx/conf.d:/etc/nginx/conf.d
-      - static_volume:/opt/services/djangoapp/static  # <-- bind the static volume
-      - media_volume:/opt/services/djangoapp/media  # <-- bind the media volume
+      - ./reactapp:/var/www/reactapp  # <-- bind reactapp
     depends_on:
       - djangoapp
     networks:
